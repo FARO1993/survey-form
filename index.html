@@ -1,13 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Survey form</title>
+    <title>Kitten survey</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    Hellow world
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">
+          <i>Kitten Survey</i>
+        </h1>
+        <p id="description" class="description text-center">
+          "The cat is the only animal that has managed to domesticate man"
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your e-mail"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number"
+            >Age<span class="clue">(optional)</span></label
+          >
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="10"
+            max="99"
+            class="form-control"
+            placeholder="Age"
+          />
+        </div>
+        <div class="form-group">
+          <p>Which of these options describes your love kittens</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="normal">Normal</option>
+            <option value="lover">Kittens lover</option>
+            <option value="crazy">Crazy about kittens</option>
+            <option value="religion">My religion is kittens</option>
+            <option value="world">My world is kittens</option>
+            <option value="slave">I am a slave to kittens</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>Do you recommend people to have a cat?</p>
+          <label>
+            <input
+              name="user-recommend"
+              value="definitely"
+              type="radio"
+              class="input-radio"
+              checked
+            />Definitely</label
+          >
+          <label>
+            <input
+              name="user-recommend"
+              value="maybe"
+              type="radio"
+              class="input-radio"
+            />Maybe</label
+          >
+
+          <label
+            ><input
+              name="user-recommend"
+              value="who would say no?"
+              type="radio"
+              class="input-radio"
+            />Who would say no?</label
+          >
+
+          <label>
+            <input
+              name="user-recommend"
+              value="it's impossible to say no"
+              type="radio"
+              class="input-radio"
+            />It's impossible to say no
+          </label>
+        </div>
+
+        <div class="form-group">
+          <p>What is your favorite feature of kittens?</p>
+          <select id="most-like" name="mostLike" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="hair">Hair</option>
+            <option value="little eyes">Little eyes</option>
+            <option value="his purr">His purr</option>
+            <option value="his indifference">His indifference</option>
+            <option value="everything, they are beautiful">
+              Everything, they are beautiful
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>
+            How you like a cat to be?
+            <span class="clue">(Check all the options you want)</span>
+          </p>
+
+          <label
+            ><input
+              name="prefer"
+              value="grumpy"
+              type="checkbox"
+              class="input-checkbox"
+            />Grumpy</label
+          >
+          <label>
+            <input
+              name="prefer"
+              value="
+              sleepyhead"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            Sleepyhead</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="
+              playful"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            Playful</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="
+              shy"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            Shy</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="curious"
+              type="checkbox"
+              class="input-checkbox"
+            />Curious</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="glutton"
+              type="checkbox"
+              class="input-checkbox"
+            />Glutton</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="
+              explorer"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            Explorer</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="cuddly"
+              type="checkbox"
+              class="input-checkbox"
+            />Cuddly</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="disobedient"
+              type="checkbox"
+              class="input-checkbox"
+            />Disobedient</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="obedient"
+              type="checkbox"
+              class="input-checkbox"
+            />Obedient</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="happy"
+              type="checkbox"
+              class="input-checkbox"
+            />Happy</label
+          >
+        </div>
+
+        <div class="form-group">
+          <p>Do you want to add any comments?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
